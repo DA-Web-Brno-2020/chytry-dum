@@ -1,0 +1,156 @@
+/* Google font */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i&display=swap&subset=latin-ext');
+
+/* Moderní box model */
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Raleway, sans-serif;
+}
+
+#app {
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	grid-template-rows: 100vh;
+}
+
+header {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+	background: #013565 url('/images/header-bg.jpg') center/cover no-repeat ;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 64px;
+	line-height: 1;
+	font-weight: normal;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-90deg);
+	white-space: nowrap;
+}
+
+
+main {
+	display: grid;
+	grid-template-columns: 350px 1fr;
+	background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
+}
+
+
+/* seznam svetel */
+.svetla {
+	overflow: auto;
+	padding: 20px;
+}
+
+.svetlo {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+	transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+	border: 2px solid white;
+}
+
+.svetlo:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+	border-color: #0099ff;
+}
+
+.svetlo:active {
+	transform: translateY(0);
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+	border-color: #0099ff;
+}
+
+.svetlo-ikona {
+	padding: 10px 20px;
+}
+
+.svetlo-ikona img {
+	width: 40px;
+}
+
+.svetlo-nazev {
+	flex: 1;
+	padding: 10px 20px 10px 0;
+	font-weight: bold;
+}
+
+/* detail */
+
+.detail {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #013565 url('/images/header-bg.jpg') center/cover no-repeat;
+}
+
+.detail-inner {
+	width: 400px;
+	min-height: 300px;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.detail-ikona {
+	text-align: center;
+}
+
+.detail-ikona img {
+	width: 80px;
+}
+
+.detail-nazev {
+	text-align: center;
+	margin: 30px 0;
+}
+
+.detail-buttons {
+	display: flex;
+}
+
+.detail-buttons button {
+	flex: 0 0 50%;
+	border: 0;
+	outline: 0;
+	padding: 20px;
+	font-size: 20px;
+	background-color: #d5d5d5;
+	color: #888;
+	cursor: pointer;
+}
+
+.detail-buttons button:first-child {
+	border-radius: 5px 0 0 5px;
+}
+
+.detail-buttons button:last-child {
+	border-radius: 0 5px 5px 0;
+}
+
+.detail-buttons button.aktivni {
+	background-color: #0099ff;
+	color: white;
+}
